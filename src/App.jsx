@@ -7,6 +7,12 @@ const App = () => {
       switch (action.type) {
         case "SET_NAME":
           return { ...state, name: action.payload };
+        case "ADD_NAME":
+          return {
+            ...state,
+            names: [...state.names, state.name],
+            name: "",
+          };
       }
     },
     {
@@ -23,8 +29,11 @@ const App = () => {
           dispatch({ type: "SET_NAME", payload: event.target.value })
         }
       />
+      <button onClick={() => dispatch({ type: "ADD_NAME" })}>Add Name</button>
 
-      <div>{state.name}</div>
+      {state.names.map((name, index) => (
+        <p key={index}>{name}</p>
+      ))}
     </div>
   );
 };
