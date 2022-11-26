@@ -1,12 +1,10 @@
 import "./App.css";
-import NamesList from "./components/NamesList";
-import UserForm from "./components/UserForm";
+import Numbers from "./components/useMemo/Numbers";
 
 const App = () => {
   return (
     <div className="App">
-      <UserForm />
-      <NamesList />
+      <Numbers />
     </div>
   );
 };
