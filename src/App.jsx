@@ -1,10 +1,10 @@
 import "./App.css";
-import Names from "./components/useEffect/Names";
+import Stopwatch from "./components/useEffect/Stopwatch";
 
 const App = () => {
   return (
     <div className="App">
-      <Names />
+      <Stopwatch />
     </div>
   );
 };
