@@ -1,10 +1,10 @@
 import "./App.css";
-import Numbers from "./components/useMemo/Numbers";
+import Names from "./components/useEffect/Names";
 
 const App = () => {
   return (
     <div className="App">
-      <Numbers />
+      <Names />
     </div>
   );
 };
