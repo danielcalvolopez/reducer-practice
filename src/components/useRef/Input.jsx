@@ -7,16 +7,22 @@ const Input = () => {
     inputRef.current.focus();
   }, []);
 
-  const [names, setNames] = useState([]);
+  const idRef = useRef(1);
+  const [names, setNames] = useState([
+    { id: idRef.current++, name: "Sara" },
+    { id: idRef.current++, name: "Max" },
+  ]);
 
-  const onAddName = (event) => {
-    setNames([...names, inputRef.current.value]);
+  const onAddName = () => {
+    setNames([...names, { id: idRef.current++, name: inputRef.current.value }]);
     inputRef.current.value = "";
   };
   return (
     <div>
-      {names.map((name) => (
-        <div key={name}>{name}</div>
+      {names.map(({ name, id }) => (
+        <div key={id}>
+          {id} - {name}
+        </div>
       ))}
       <input ref={inputRef} type="text" />
       <button onClick={onAddName}>Add Name</button>
