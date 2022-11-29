@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
+import usePokemon from "./hooks/usePokemon";
 
 const App = () => {
-  return <div className="App"></div>;
+  const { pokemon } = usePokemon();
+  return <div className="App">{JSON.stringify(pokemon)}</div>;
 };
 
 export default App;
