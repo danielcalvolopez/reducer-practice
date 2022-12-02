@@ -1,14 +1,20 @@
 import React from "react";
+import { Provider } from "react-redux";
 import "./App.css";
+import SearchBox from "./components/SearchBox";
 import { PokemonContextProvider } from "./components/useContext/PokemonContext";
-import usePokemon from "./hooks/usePokemon";
+
+import { store } from "./redux/store/store";
 
 const App = () => {
-  const { pokemon } = usePokemon();
   return (
-    <PokemonContextProvider>
-      <div className="App"></div>
-    </PokemonContextProvider>
+    <Provider store={store}>
+      <PokemonContextProvider>
+        <div className="App">
+          <SearchBox />
+        </div>
+      </PokemonContextProvider>
+    </Provider>
   );
 };
 
