@@ -1,21 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { PokemonContext } from "./useContext/PokemonContext";
 
-interface Pokemon {
-  id: number;
-  name: string;
-  type: string[];
-  hp: number;
-  attack: number;
-  defense: number;
-  special_attack: number;
-  special_defense: number;
-  speed: number;
-}
-
-const PokemonList = ({ pokemon }: { pokemon: Pokemon[] }) => {
+const PokemonList = () => {
+  const { pokemonCtx } = useContext(PokemonContext);
   return (
     <div>
-      {pokemon.map((pokemon) => (
+      {pokemonCtx.map((pokemon) => (
         <div key={pokemon.id}>{pokemon.name}</div>
       ))}
     </div>
