@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
-import { PokemonContext } from "./useContext/PokemonContext";
+import React from "react";
+import { usePokemonQuery } from "../redux/store/store";
 
 const PokemonList = () => {
-  const { pokemonCtx } = useContext(PokemonContext);
+  const { data } = usePokemonQuery(undefined);
   return (
     <div>
-      {pokemonCtx.map((pokemon) => (
+      {(data || []).map((pokemon) => (
         <div key={pokemon.id}>{pokemon.name}</div>
       ))}
     </div>

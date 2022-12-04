@@ -1,6 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import "./App.css";
+import PokemonList from "./components/PokemonList";
 import SearchBox from "./components/SearchBox";
 import { PokemonContextProvider } from "./components/useContext/PokemonContext";
 
@@ -12,6 +13,7 @@ const App = () => {
       <PokemonContextProvider>
         <div className="App">
           <SearchBox />
+          <PokemonList />
         </div>
       </PokemonContextProvider>
     </Provider>
