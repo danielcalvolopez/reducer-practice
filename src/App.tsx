@@ -2,6 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import "./App.css";
 import Heading from "./components/ typescript/Heading";
+import Section from "./components/ typescript/Section";
 import { PokemonContextProvider } from "./components/useContext/PokemonContext";
 
 import { store } from "./redux/store/store";
@@ -12,6 +13,7 @@ const App = () => {
       <PokemonContextProvider>
         <div className="App">
           <Heading title={"Hello"} />
+          <Section>This is the children</Section>
         </div>
       </PokemonContextProvider>
     </Provider>
