@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import "./App.css";
 import Counter from "./components/ typescript/Counter";
 import Heading from "./components/ typescript/Heading";
+import List from "./components/ typescript/List";
 import Section from "./components/ typescript/Section";
 import { PokemonContextProvider } from "./components/useContext/PokemonContext";
 
@@ -17,6 +18,10 @@ const App = () => {
           <Heading title={"Hello"} />
           <Section>This is the children</Section>
           <Counter setCount={setCount}>Count is {count}</Counter>
+          <List
+            items={["Spain", "Emgland", "Brazil"]}
+            render={(item: string) => <span>{item}</span>}
+          />
         </div>
       </PokemonContextProvider>
     </Provider>
