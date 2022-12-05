@@ -1,8 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import "./App.css";
-import PokemonList from "./components/PokemonList";
-import SearchBox from "./components/SearchBox";
+import Heading from "./components/ typescript/Heading";
 import { PokemonContextProvider } from "./components/useContext/PokemonContext";
 
 import { store } from "./redux/store/store";
@@ -12,8 +11,7 @@ const App = () => {
     <Provider store={store}>
       <PokemonContextProvider>
         <div className="App">
-          <SearchBox />
-          <PokemonList />
+          <Heading title={"Hello"} />
         </div>
       </PokemonContextProvider>
     </Provider>
