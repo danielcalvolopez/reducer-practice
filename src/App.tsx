@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Provider } from "react-redux";
 import "./App.css";
 import Counter from "./components/ typescript/Counter";
+import Footer from "./components/ typescript/Footer";
 import Heading from "./components/ typescript/Heading";
 import List from "./components/ typescript/List";
 import Section from "./components/ typescript/Section";
@@ -22,6 +23,7 @@ const App = () => {
             items={["Spain", "Emgland", "Brazil"]}
             render={(item: string) => <span>{item}</span>}
           />
+          <Footer />
         </div>
       </PokemonContextProvider>
     </Provider>
